@@ -2,7 +2,7 @@
 
 <html>  
 
-  <meta charset="UTF-8"
+  <meta charset="UTF-8">
   <title>HTML TO PDF CIGL</title>
 
 <body>
