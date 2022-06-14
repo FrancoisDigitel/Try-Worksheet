@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script type = "text/javascript" src="pdfExport.js"></script>
+    <script type = "text/javascript" src="./js/pdfExport.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js"></script>
     <script src=
     "https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.8.1/html2pdf.bundle.min.js" integrity="sha512-vDKWohFHe2vkVWXHp3tKvIxxXg0pJxeid5eo+UjdjME3DBFBn2F8yWOE0XmiFcFbXxrEOR1JriWEno5Ckpn15A=="  crossorigin="anonymous"></script>
@@ -33,11 +33,9 @@
                 <td ><label for="location" id = "lLocation">first Name:</label></td>
                     <td><input type="text" name="location" id= "location" placeholder="l-0000 Esch-sur-Alzette" value="" required></td>
             </tr>
-        </table>
-        <a href="javascript:exportPDF();">Export</a> <br>
-        <input type="submit">
- 
+        </table>      
     </form>
-
+    <a href="javascript:exportPDF();">Export</a> <br>
+   
 </body>
 </html>
