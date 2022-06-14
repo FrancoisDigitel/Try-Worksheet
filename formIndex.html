@@ -9,31 +9,152 @@
     <script src=
     "https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.8.1/html2pdf.bundle.min.js" integrity="sha512-vDKWohFHe2vkVWXHp3tKvIxxXg0pJxeid5eo+UjdjME3DBFBn2F8yWOE0XmiFcFbXxrEOR1JriWEno5Ckpn15A=="  crossorigin="anonymous"></script>
     <title>fiche d'intervention</title>
-    <h1 id="title"> fiche d'intervention</h1>
+   
 </head>
 <body>
     <form id = "data" action = "PdfConverter.php" method = "POST">
-        <table>
+        <h1 id="title"> fiche d'intervention</h1>
+        <br>
+        <table id = "bigTable1">
             <tr>
-                <td ><label for="fName" id = "lFName">first Name:</label></td>
-                    <td><input type="text" name="fName" id= "fName" placeholder="John"  required  value=""></td>
-            </tr>
+            <td>
+                <table id = "clientInfo">
+                    <tr>
+                        <td ><label for="fName" id = "lFName">first Name:</label></td>
+                            <td><input type="text" name="fName" id= "fName" placeholder="John"  required  value=""></td>
+                    </tr>
 
-            <tr>
-                <td ><label for="lName" id = "lLName">Last Name:</label></td>
-                    <td><input type="text" name="lName" id= "lName" placeholder="Wick" value="" required></td>
-            </tr>
+                    <tr>
+                        <td ><label for="lName" id = "lLName">Last Name:</label></td>
+                            <td><input type="text" name="lName" id= "lName" placeholder="Wick" value="" required></td>
+                    </tr>
 
-            <tr>
-                <td ><label for="address" id = "lAddress">Address:</label></td>
-                    <td><input type="text" name="address" id= "address" placeholder="123, rue de l'Eau" value="" required></td>
-            </tr>
+                    <tr>
+                        <td ><label for="address" id = "lAddress">Address:</label></td>
+                            <td><input type="text" name="address" id= "address" placeholder="123, rue de l'Eau" value="" required></td>
+                    </tr>
 
+                    <tr>
+                        <td ><label for="location" id = "lLocation">first Name:</label></td>
+                            <td><input type="text" name="location" id= "location" placeholder="l-0000 Esch-sur-Alzette" value="" required></td>
+                    </tr>
+                </table>
+            </td>
+            <table id = "generalInformation"></table>
+    </table>
+        
+        <h2 id= "Work">Travaux effectués</h2>
+        <table id = "bigTable">
             <tr>
-                <td ><label for="location" id = "lLocation">first Name:</label></td>
-                    <td><input type="text" name="location" id= "location" placeholder="l-0000 Esch-sur-Alzette" value="" required></td>
-            </tr>
-        </table>      
+            <td>
+                <table id = "workTable">
+                    <tr>
+                        <th>Travaux </th>
+                        <th>Temps (min)</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input Type = "checkbox" name="tondre " id = "checkbox.1">
+                            <label id = "lCheckbox.1" for = "tondre ">tondre la pelouse</label>
+                        </td>
+                        <td>
+                            <input type = "text" id="temps.1" name = "temps.1">
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input Type = "checkbox" name="debroussailler " id = "checkbox.2">
+                            <label id = "lCheckbox.2" for = "debroussailler ">Débrousailler</label>
+                        </td>
+                        <td>
+                            <input type = "text" id="temps.2" name = "temps.2">
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input Type = "checkbox" name="bêcher" id = "checkbox.3">
+                            <label id = "lCheckbox.3" for = "bêcher ">Bêcher le jardin</label>
+                        </td>
+                        <td>
+                            <input type = "text" id="temps.3" name = "temps.3">
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input Type = "checkbox" name="tailler" id = "checkbox.4">
+                            <label id = "lCheckbox.4" for = "tailler">Tailler des haies</label>
+                        </td>
+                        <td>
+                            <input type = "text" id="temps.4" name = "temps.4">
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input Type = "checkbox" name="couper " id = "checkbox.5">
+                            <label id = "lCheckbox.5" for = "couper ">Couper / Tailler des arbres</label>
+                        </td>
+                        <td>
+                            <input type = "text" id="temps.5" name = "temps.5">
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input Type = "checkbox" name="jardinage " id = "checkbox.6">
+                            <label id = "lCheckbox.6" for = "jardinage ">Jardinage divers</label>
+                        </td>
+                        <td>
+                            <input type = "text" id="temps.6" name = "temps.6">
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input Type = "checkbox" name="ramassage " id = "checkbox.7">
+                            <label id = "lCheckbox.7" for = "ramassage ">Ramassage feuilles</label>
+                        </td>
+                        <td>
+                            <input type = "text" id="temps.7" name = "temps.7">
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input Type = "checkbox" name="recyclage " id = "checkbox.8">
+                            <label id = "lCheckbox.8" for = "recyclage ">Recyclage</label>
+                        </td>
+                        <td>
+                            <input type = "text" id="temps.8" name = "temps.8">
+
+                        </td>
+                    </tr>
+            </td>
+                </table>  
+            <td>
+                <table id = "workTable2">
+                <tr>
+                    <th>Travaux </th>
+                    <th>Temps (min)</th>
+                </tr>
+                <tr>
+                    <td>
+                        <input Type = "checkbox" name="tondre " id = "checkbox.1">
+                        <label id = "lCheckbox.1" for = "tondre ">tondre la pelouse</label>
+                    </td>
+                    <td>
+                        <input type = "text" id="temps.1" name = "temps.1">
+
+                    </td>
+                </tr>
+
+                </table>  
+            </td>
+            </tr> 
+         </table>
     </form>
     <a href="javascript:exportPDF();">Export</a> <br>
    
