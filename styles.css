@@ -4,10 +4,26 @@ add this to the html file
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
 */
-
-#bigTable1 {color:#fff!important;background-color:#f44336!important}
-
-body {
+/*using 150 dpi*/
+html {
   max-width: 1240;
   max-height: 1754px;
+}
+
+header img {
+  width: 50%;
+  height: 50%;
+}
+
+/* input box border color */
+td input {
+  padding:8px;
+  display:block;
+  border:1px solid rgb(255, 0, 0);
+  width:100%
+} 
+
+/*text befor box*/
+tr label {
+  color: rgb(0, 255, 21);
 }
