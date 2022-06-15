@@ -1,43 +1,45 @@
-/* 
-add this to the html file
-<link rel="stylesheet" href="styles.css">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-
-*/
-
-
-
-/*using 150 dpi*/
+/*page setup as A4 using 150 dpi*/
 html {
   max-width: 1240;
   max-height: 1754px;
   background-color: white;
 }
 
-/*header logo*/
-/* Three image containers (use 25% for four, and 50% for two, etc) 
-.column {
+/*header banner*/
+#header-img{
+  /*background-image: url("img/header-01.png");*/
+  background-color: rgb(255, 255, 255);
+  height: 145px;
+  background-repeat: no-repeat;
+ }
+
+body {
+  position: relative;
+  width: 1240px;
+  border: 1px solid red;
+  display: block;
+}
+
+#bigTable1 {
+  width: 1240px;
+  border: 3px solid rgb(255, 0, 0);
+ }
+
+ #clientInfo{
   float: left;
-  width: 33.33%;
-  padding: 5px;
-}
-*/
-/* Clear floats after image containers *//*
-.row::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
-
-
-
-*/
-
-.header {
   width: 100%;
-  background-image:url("ima ");
-}
+  padding-left: 20px;
+  border: 3px solid rgb(255, 0, 0);
+ }
+
+ #generalInformation {
+  float: right;
+  width: 100%;
+  padding-right: 20px;
+  border: 3px solid rgb(255, 0, 0);
+ }
+
+
 
 
 /* input box border color */

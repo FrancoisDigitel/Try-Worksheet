@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type = "text/javascript" src="./js/pdfExport.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js"></script>
-    <script src=
-    "https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.8.1/html2pdf.bundle.min.js" integrity="sha512-vDKWohFHe2vkVWXHp3tKvIxxXg0pJxeid5eo+UjdjME3DBFBn2F8yWOE0XmiFcFbXxrEOR1JriWEno5Ckpn15A=="  crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.8.1/html2pdf.bundle.min.js" integrity="sha512-vDKWohFHe2vkVWXHp3tKvIxxXg0pJxeid5eo+UjdjME3DBFBn2F8yWOE0XmiFcFbXxrEOR1JriWEno5Ckpn15A=="  crossorigin="anonymous"></script>
    
     <!--STYLE-->
 
@@ -19,29 +18,13 @@
     
 </head>
 
-<header>
-    <!--
-        ADDED THIS TO TEST OUT LOGO PLACEMNET WITH CSS
-    -->
-    <!--
-    <div class="row">
-        <div class="column">
-          <img src="img/cigl-logo.jpg" alt="CIGL logo" style="width:50%">
-        </div>
-        <div class="column">
-          <img src="img/geschirkescht-logo.jpg" alt="geschir kescht logo" style="width:50%">
-        </div>
-      </div>
-    -->
-
-<!--
-    <img src="/img/cigl-logo.jpg" alt="CIGL logo">
-    <img src="/img/geschirkescht-logo.jpg" alt="geschir kescht logo">
--->
-</header>
 <body>
     <form id = "data" action = "PdfConverter.php" method = "POST">
+
+        <img id = "header-img" src="img/header-01.png" alt="image header">
+
         <h1 id="title"> fiche d'intervention</h1>
+        
         <table id = "bigTable1">
             <tr>
                 <th>Information Client</th>
