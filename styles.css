@@ -4,16 +4,43 @@ add this to the html file
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
 */
+
+
+
 /*using 150 dpi*/
 html {
   max-width: 1240;
   max-height: 1754px;
 }
 
+/*header logo*/
 header img {
-  width: 50%;
-  height: 50%;
+  * {
+    box-sizing: border-box;
+  }
+  
+  .column {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+  }
+  
+  /* Clearfix (clear floats) */
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
 }
+
+
+
+
+
+
+
+
+
 
 /* input box border color */
 td input {
