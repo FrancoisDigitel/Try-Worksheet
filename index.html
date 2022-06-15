@@ -267,11 +267,43 @@
         </table>
         
         <h2>À facturer</h2>  
-        <table id = "workers">
+        <table id = "machines">
+            <tr>
+                <th>Machines ultilisées</th>
+                <th>Quantité</th>
+                <th>Nombre des heures</th>
+                <th>Prix</th>
+            </tr>
+            <tr>
+                <td><input type="text" name = "machine1" id="machine1"></td>
+                <td><input type="text" name = "qMachine1" id="qMachine1"></td>
+                <td><input type="text" name = "nMachine1" id="nMachine1"></td>
+                <td><input type="text" name = "pMachine1" id="pMachine1"></td>
+            </tr>
+            <tr>
+                <td><input type="text" name = "machine2" id="machine2"></td>
+                <td><input type="text" name = "qMachine2" id="qMachine2"></td>
+                <td><input type="text" name = "nMachine2" id="nMachine2"></td>
+                <td><input type="text" name = "pMachine2" id="pMachine2"></td>
+            </tr>
+            <tr>
+                <td><input type="text" name = "machine3" id="machine3"></td>
+                <td><input type="text" name = "qMachine3" id="qMachine3"></td>
+                <td><input type="text" name = "nMachine3" id="nMachine3"></td>
+                <td><input type="text" name = "pMachine3" id="pMachine3"></td>
+            </tr>
+            <tr>
+                <td><input type="text" name = "machine4" id="machine4"></td>
+                <td><input type="text" name = "qMachine4" id="qMachine4"></td>
+                <td><input type="text" name = "nMachine4" id="nMachine4"></td>
+                <td><input type="text" name = "pMachine4" id="pMachine4"></td>
+            </tr>
+        </table>
+        <table id = "workers" style="margin-left: 11%;">
             <tr>
                 <th>Noms des Intervenants</th>
                 <th>Nombre des heures</th>
-                <th>Prix</th>
+                <th></th>
             </tr>
             <tr>
                 <td><input type="text" name = "worker1" id="worker1"></td>
@@ -299,39 +331,37 @@
                 <td><input type="text" name = "pWorker5" id="pWworker5"></td>
             </tr>
         </table>
-        <table id = "workers">
+        <table id = "produits" style="margin-left: 11%;">
             <tr>
-                <th>Machines ultilisées</th>
-                <th>Quantité</th>
-                <th>Nombre des heures</th>
+                <th>Materiel utilisées</th>
+                <th>Quantité produits (litre)</th>
                 <th></th>
             </tr>
             <tr>
-                <td><input type="text" name = "machine1" id="machine1"></td>
-                <td><input type="text" name = "qMachine1" id="qMachine1"></td>
-                <td><input type="text" name = "nMachine1" id="nMachine1"></td>
-                <td><input type="text" name = "pMachine1" id="pMachine1"></td>
+                <td>
+                    <input type="checkbox" name = "produit1" id="produi1">
+                    <label for = "produit1" id = "lProduit1">Produit de nettoyage</label>
+                </td>
+                <td><input type="text" name = "qProduit1" id="qProduit1"></td>
+                <td><input type="text" name = "pProduit1" id="pProduit1"></td>
             </tr>
             <tr>
-                <td><input type="text" name = "machine2" id="machine2"></td>
-                <td><input type="text" name = "qMachine2" id="qMachine2"></td>
-                <td><input type="text" name = "nMachine2" id="nMachine2"></td>
-                <td><input type="text" name = "pMachine2" id="pMachine2"></td>
+                <td>
+                    <input type="checkbox" name = "produit2" id="produi2">
+                    <label for = "produit2" id = "lProduit2">Sel (Kg)</label>
+                </td>
+                <td><input type="text" name = "qProduit2" id="qProduit2"></td>
+                <td><input type="text" name = "pProduit2" id="pProduit2"></td>
             </tr>
             <tr>
-                <td><input type="text" name = "machine3" id="machine3"></td>
-                <td><input type="text" name = "qMachine3" id="qMachine3"></td>
-                <td><input type="text" name = "nMachine3" id="nMachine3"></td>
-                <td><input type="text" name = "pMachine3" id="pMachine3"></td>
-            </tr>
-            <tr>
-                <td><input type="text" name = "machine4" id="machine4"></td>
-                <td><input type="text" name = "qMachine4" id="qMachine4"></td>
-                <td><input type="text" name = "nMachine4" id="nMachine4"></td>
-                <td><input type="text" name = "pMachine4" id="pMachine4"></td>
+                <td>
+                    <input type="checkbox" name = "produit3" id="produi3">
+                    <label for = "produit3" id = "lProduit3">Frais RDV. non respecté</label>
+                </td>
+                <td><input type="text" name = "qProduit3" id="qProduit3"></td>
+                <td><input type="text" name = "pProduit3" id="pProduit3"></td>
             </tr>
         </table>
-
     </form>
     <a href="javascript:exportPDF();">Export</a> <br>
 </body>
