@@ -16,7 +16,7 @@
     <!--STYLE-->
 
     <title>fiche d'intervention</title>
-   
+    
 </head>
 <body>
     <form id = "data" action = "PdfConverter.php" method = "POST">
@@ -32,7 +32,7 @@
                 <table id = "clientInfo">
                     <tr>
                         <td ><label for="fName" id = "lFName">first Name:</label></td>
-                         <td><input type="text" name="fName" id= "fName" placeholder="John"  required  value=""></td>
+                        <td><input type="text" name="fName" id= "fName" placeholder="John"  required  value=""></td>
                     </tr>
 
                     <tr>
@@ -42,7 +42,7 @@
 
                     <tr>
                         <td ><label for="address" id = "lAddress">Address:</label></td>
-                         <td><input type="text" name="address" id= "address" placeholder="123, rue de l'Eau" value="" required></td>
+                        <td><input type="text" name="address" id= "address" placeholder="123, rue de l'Eau" value="" required></td>
                     </tr>
 
                     <tr>
@@ -52,38 +52,35 @@
                 </table>
             </td>
             <td>
-                 <table id = "generalInformation">
+                <table id = "generalInformation">
                     <tr>
                         <td><label for = "CDate">Date</label></td>
                         <td><input type=" date" id= "CDate" name = "CDate" placeholder="01/01/2022" required></td>
-                   </tr> 
-                   <tr>
+                </tr> 
+                <tr>
                         <td><label for = "NDate" >prochain rdv</label></td>
-                         <td><input type=" date" id= "NDate" name = "NDate" placeholder="01/01/2022" required></td>
-                         
+                        <td><input type=" date" id= "NDate" name = "NDate" placeholder="01/01/2022" required></td>
                     </tr> 
                     <tr>
                         
                         <td><label for = "startTime">Heure début</label></td>
                         <td><input type=" date" id= "STime" name = "startTime" placeholder="08:00" required></td>
-                         
-                  </tr> 
-                  <tr>
-                       
+                </tr> 
+                <tr> 
                     <td><label for = "endTime">Heure fin</label></td>
                     <td><input type=" date" id= "EndTime" name = "endTime" placeholder="08:00" required></td>
                         
-                  </tr> 
-                  <tr>
+                </tr> 
+                <tr>
                         
                     <td><label for = "totalHours">Heure totale</label></td>
                     <td><input type=" date" id= "TTime" name = "totalHours"></td>
                         
-                  </tr> 
+                </tr> 
                 </table>
             </td>
             </tr>
-      </table>
+    </table>
         
         <h2 id= "Work">Travaux effectués</h2>
         <table id = "bigTable">
@@ -101,7 +98,6 @@
                         </td>
                         <td>
                             <input type = "text" id="temps.1" name = "temps.1">
-
                         </td>
                     </tr>
                     <tr>
@@ -111,7 +107,6 @@
                         </td>
                         <td>
                             <input type = "text" id="temps.2" name = "temps.2">
-
                         </td>
                     </tr>
                     <tr>
@@ -121,7 +116,6 @@
                         </td>
                         <td>
                             <input type = "text" id="temps.3" name = "temps.3">
-
                         </td>
                     </tr>
                     <tr>
@@ -131,7 +125,6 @@
                         </td>
                         <td>
                             <input type = "text" id="temps.4" name = "temps.4">
-
                         </td>
                     </tr>
                     <tr>
@@ -141,7 +134,6 @@
                         </td>
                         <td>
                             <input type = "text" id="temps.5" name = "temps.5">
-
                         </td>
                     </tr>
                     <tr>
@@ -151,7 +143,6 @@
                         </td>
                         <td>
                             <input type = "text" id="temps.6" name = "temps.6">
-
                         </td>
                     </tr>
                     <tr>
@@ -161,7 +152,6 @@
                         </td>
                         <td>
                             <input type = "text" id="temps.7" name = "temps.7">
-
                         </td>
                     </tr>
                     <tr>
@@ -171,7 +161,6 @@
                         </td>
                         <td>
                             <input type = "text" id="temps.8" name = "temps.8">
-
                         </td>
                     </tr>
             </td>
@@ -269,16 +258,81 @@
                         </td>
                         <td>
                             <input type = "text" id="temps.17" name = "temps.17">
-
                         </td>
                     </tr>
-            </td>
+                    </td>
                 </table>  
             </td>
             </tr> 
-         </table>
+        </table>
+        
+        <h2>À facturer</h2>  
+        <table id = "workers">
+            <tr>
+                <th>Noms des Intervenants</th>
+                <th>Nombre des heures</th>
+                <th>Prix</th>
+            </tr>
+            <tr>
+                <td><input type="text" name = "worker1" id="worker1"></td>
+                <td><input type="text" name = "hWorker1" id="hWorker1"></td>
+                <td><input type="text" name = "pWorker1" id="pWworker1"></td>
+            </tr>
+            <tr>
+                <td><input type="text" name = "worker2" id="worker2"></td>
+                <td><input type="text" name = "hWorker2" id="hWorker2"></td>
+                <td><input type="text" name = "pWorker2" id="pWworker2"></td>
+            </tr>
+            <tr>
+                <td><input type="text" name = "worker3" id="worker3"></td>
+                <td><input type="text" name = "hWorker3" id="hWorker3"></td>
+                <td><input type="text" name = "pWorker3" id="pWworker3"></td>
+            </tr>
+            <tr>
+                <td><input type="text" name = "worker4" id="worker4"></td>
+                <td><input type="text" name = "hWorker4" id="hWorker4"></td>
+                <td><input type="text" name = "pWorker4" id="pWworker4"></td>
+            </tr>
+            <tr>
+                <td><input type="text" name = "worker5" id="worker5"></td>
+                <td><input type="text" name = "hWorker5" id="hWorker5"></td>
+                <td><input type="text" name = "pWorker5" id="pWworker5"></td>
+            </tr>
+        </table>
+        <table id = "workers">
+            <tr>
+                <th>Machines ultilisées</th>
+                <th>Quantité</th>
+                <th>Nombre des heures</th>
+                <th></th>
+            </tr>
+            <tr>
+                <td><input type="text" name = "machine1" id="machine1"></td>
+                <td><input type="text" name = "qMachine1" id="qMachine1"></td>
+                <td><input type="text" name = "nMachine1" id="nMachine1"></td>
+                <td><input type="text" name = "pMachine1" id="pMachine1"></td>
+            </tr>
+            <tr>
+                <td><input type="text" name = "machine2" id="machine2"></td>
+                <td><input type="text" name = "qMachine2" id="qMachine2"></td>
+                <td><input type="text" name = "nMachine2" id="nMachine2"></td>
+                <td><input type="text" name = "pMachine2" id="pMachine2"></td>
+            </tr>
+            <tr>
+                <td><input type="text" name = "machine3" id="machine3"></td>
+                <td><input type="text" name = "qMachine3" id="qMachine3"></td>
+                <td><input type="text" name = "nMachine3" id="nMachine3"></td>
+                <td><input type="text" name = "pMachine3" id="pMachine3"></td>
+            </tr>
+            <tr>
+                <td><input type="text" name = "machine4" id="machine4"></td>
+                <td><input type="text" name = "qMachine4" id="qMachine4"></td>
+                <td><input type="text" name = "nMachine4" id="nMachine4"></td>
+                <td><input type="text" name = "pMachine4" id="pMachine4"></td>
+            </tr>
+        </table>
+
     </form>
     <a href="javascript:exportPDF();">Export</a> <br>
-   
 </body>
 </html>
