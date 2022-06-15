@@ -1,18 +1,13 @@
 /* 
 add this to the html file
--   <link rel="stylesheet" href="styles.css">
--   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
-*/
-
-/*
-#bigTable1 {
-    color: rgb(255, 0, 0);
-    w3-input
-    w3-border
-    w3-round 
-    w3-red
-  }
 */
 
 #bigTable1 {color:#fff!important;background-color:#f44336!important}
+
+body {
+  max-width: 1240;
+  max-height: 1754px;
+}
