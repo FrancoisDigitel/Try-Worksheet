@@ -19,7 +19,7 @@ Stuff to consoder when building the production server.
     - https://www.cyberciti.biz/tips/iptables-mac-address-filtering.html
 
 
-    # TO-DO
+# TO-DO
 
-    - [ ] Add images and make then render with the JS code
-    - [ ] Make everything fit into one A4 page
+   - [ ] Add images and make then render with the JS code
+   - [ ] Make everything fit into one A4 page
