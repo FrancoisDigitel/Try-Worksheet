@@ -1,46 +1,88 @@
 var mysql = require('mysql');
 var number = 0;
+var DBYear = 0;
 var con = mysql.createConnection({
     host: "form.lpif.lu",
     user: "CIGL-USER",
     password: "0f$374lXq",
-    database: "CIGL-DB"
+    database: "CIGL-DB",
+    multipleStatements: true
 });
-getSerialNumber();
-
-function increaseSerialNumber(){
-con.connect(async function(err) {
-    var temp = " "; 
-   
+con.connect(function(err) {
     if (err) throw err;
-  //Select the serialNumber from the info table in the DB
-    con.query("Select serialNumber FROM info", function (err, result, fields) {
-        if (err) throw err;
-        temp = JSON.stringify(result);  // we take the return value from the DB and convert it into a JSON string
-        var temp2 = temp.split(":");    // here we split that JSON String starting at the place with the ":". 
-        temp2.forEach(function(index,value){
-            if(!isNaN(parseInt(index))){
-                number = parseInt(index);
-                console.log(number)
-                number += 1
-                var sql = "UPDATE info SET serialNumber =('"+number+"')";
-                con.query(sql, function (err, result) {
-                if (err) throw err;
-                    console.log(result.affectedRows + " record(s) updated");
-                });
-            }
-
-        })
-    })
-        con.end;
-    
 });
+UpdateDB();
+
+ function UpdateDB(){
+    var tempYear = "";
+    con.query("Select currentYear FROM info", (err, result,fields)=> {
+        if (err) throw err;
+        DBYear = JSON.stringify(result);
+        tempYear = DBYear.split(":");
+        tempYear.forEach(function(index,value){
+            if(!isNaN(parseInt(index))){
+                DBYear = parseInt(index);
+                console.log(DBYear);
+                UpdateSerialNumber();
+            }
+        });
+    });
+};
+// EN: 
+// Ethis Update method gets used to update the serialNumber accordingly. If we the variable Year is equal to the current one
+// then we increase the serialNumber per 1, else we set it to 0;
+
+// DE:
+// diese Update-Methode wird verwendet, um die serialNumber entsprechend zu aktualisieren. Wenn die Variable Year gleich dem aktuellen Wert ist
+// dann erhöhen wir die serialNumber um 1, ansonsten setzen wir sie auf 0;
+
+function UpdateSerialNumber(){
+    var temp = " "; 
+    var Year = new Date().getFullYear();
+    
+  //Select the serialNumber from the info table in the DB
+   if(Year == DBYear){
+        con.query("Select serialNumber FROM info", function (err, result, fields) {
+            if (err) throw err;
+            temp = JSON.stringify(result);  // we take the return value from the DB and convert it into a JSON string
+            var temp2 = temp.split(":");    // here we split that JSON String starting at the place with the ":". 
+            temp2.forEach(function(index,value){
+                if(!isNaN(parseInt(index))){
+                    number = parseInt(index);
+                    number += 1
+                    var sql = "UPDATE info SET serialNumber =('"+number+"')";
+                    con.query(sql, function (err, result) {
+                    if (err) throw err;
+                        console.log(result.affectedRows + " record(s) updated");
+                        console.log("true");
+                    });
+                }
+
+            })
+        })
+    }
+    else{
+        var sql = "UPDATE info SET serialNumber =('"+0+"')";
+        con.query(sql, function (err, result) {
+        if (err) throw err;
+            console.log(result.affectedRows + " record(s) updated");  
+        });
+
+        console.log(DBYear)
+        DBYear = Year;
+        var sql = "UPDATE info SET currentYear =('"+DBYear+"')";
+        con.query(sql, function (err, result) {
+            if (err) throw err;
+                console.log(result.affectedRows + " record(s) updated");
+                console.log("false");
+            });
+
+    }
+
 }
 
 function getSerialNumber(){
-    con.connect(async function(err) {
         var temp = " "; 
-        if (err) throw err;
       //Update the address field:
         con.query("Select serialNumber FROM info", function (err, result, fields) {
             if (err) throw err;
@@ -49,10 +91,8 @@ function getSerialNumber(){
             temp2.forEach(function(index,value){
                 if(!isNaN(parseInt(index))){
                     number = parseInt(index);
-                    console.log(number)
                 }
             });
         });
-    })
-}
+    }
 
