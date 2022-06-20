@@ -1,5 +1,5 @@
 
-const mysql= require('mysql');
+var mysql= require('mysql');
 var number = 0;
 var DBYear = 0;
 var con = mysql.createConnection({
