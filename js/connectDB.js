@@ -1,5 +1,5 @@
-
-var mysql = require('mysql');
+import mysqlPromise from "mysql2/promise.js";
+const mysql= require('mysql');
 var number = 0;
 var DBYear = 0;
 var con = mysql.createConnection({
@@ -12,7 +12,7 @@ var con = mysql.createConnection({
 con.connect(function(err) {
     if (err) throw err;
 });
-
+getSerialNumber()
 
 // EN: 
 // the UpdateDB() function is used to first get the Date written in the database. 
@@ -95,7 +95,7 @@ function UpdateSerialNumber(){
 }
 
  function getSerialNumber(){
-   getSerialNumber()
+   getSerialNumberFromDB()
    console.log("nada");
    return number;
 }
@@ -115,4 +115,3 @@ function getSerialNumberFromDB(){
             });
         });
     }
-    export {getSerialNumber};
