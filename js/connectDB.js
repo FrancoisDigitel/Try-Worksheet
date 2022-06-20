@@ -1,3 +1,4 @@
+
 var mysql = require('mysql');
 var number = 0;
 var DBYear = 0;
@@ -11,7 +12,19 @@ var con = mysql.createConnection({
 con.connect(function(err) {
     if (err) throw err;
 });
-UpdateDB();
+
+
+// EN: 
+// the UpdateDB() function is used to first get the Date written in the database. 
+// Afterwards it calls the  updateSerialNumber() function to update the serialNumber.
+// pay attention to callback functions. They will only execute at the end of the program no matter where you write those.
+// Therefore we call the UpdateSerialNumber() function in the callback function from the UpdateDB() function;
+
+// DE:
+// Die Funktion UpdateDB() wird verwendet, um zunächst das in der Datenbank geschriebene Datum zu erhalten. 
+// Danach ruft sie die Funktion updateSerialNumber() auf, um die Seriennummer zu aktualisieren.
+// Achten Sie auf die Callback-Funktionen. Sie werden erst am Ende des Programms ausgeführt, egal wo Sie diese schreiben.
+// Deshalb rufen wir die Funktion UpdateSerialNumber() in der Callback-Funktion von der Funktion UpdateDB() auf;
 
  function UpdateDB(){
     var tempYear = "";
@@ -44,8 +57,8 @@ function UpdateSerialNumber(){
    if(Year == DBYear){
         con.query("Select serialNumber FROM info", function (err, result, fields) {
             if (err) throw err;
-            temp = JSON.stringify(result);  // we take the return value from the DB and convert it into a JSON string
-            var temp2 = temp.split(":");    // here we split that JSON String starting at the place with the ":". 
+            temp = JSON.stringify(result);           // we take the return value from the DB and convert it into a JSON string
+            var temp2 = temp.split(":");             // here we split that JSON String starting at the place with the ":". 
             temp2.forEach(function(index,value){
                 if(!isNaN(parseInt(index))){
                     number = parseInt(index);
@@ -81,18 +94,25 @@ function UpdateSerialNumber(){
 
 }
 
-function getSerialNumber(){
+ function getSerialNumber(){
+   getSerialNumber()
+   console.log("nada");
+   return number;
+}
+
+function getSerialNumberFromDB(){
         var temp = " "; 
-      //Update the address field:
-        con.query("Select serialNumber FROM info", function (err, result, fields) {
+      //Select the address field:
+        con.query("Select serialNumber FROM info", function (err, result) {
             if (err) throw err;
             temp = JSON.stringify(result);
             var temp2 = temp.split(":");
             temp2.forEach(function(index,value){
                 if(!isNaN(parseInt(index))){
                     number = parseInt(index);
+                   console.log(number)
                 }
             });
         });
     }
-
+    export {getSerialNumber};
