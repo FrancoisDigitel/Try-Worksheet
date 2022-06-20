@@ -1,5 +1,5 @@
 // imports
-import  {getSerialNumber} from'connectDB.js';
+import  {getSerialNumber} from'./connectDB.js';
 
 
 
