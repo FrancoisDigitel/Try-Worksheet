@@ -1,4 +1,4 @@
-import mysqlPromise from "mysql2/promise.js";
+
 const mysql= require('mysql');
 var number = 0;
 var DBYear = 0;
