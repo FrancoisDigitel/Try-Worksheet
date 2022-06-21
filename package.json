@@ -1,6 +1,5 @@
 {
   "dependencies": {
-    "commonjs": "^0.0.1",
     "mysql": "^2.18.1",
     "nodejs": "^0.0.0",
     "requirejs": "^2.3.6"
