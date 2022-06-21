@@ -42,10 +42,14 @@
 
 }
 */
-
 #machines {
   border: 1px solid rgb(84, 150, 101);
   margin: 0 auto;
+}
+
+#machine1, #machine2, #machine3, #machine4, #machine5{
+  justify-content: center;
+  
 }
 #workers {
   border: 1px solid rgb(15, 131, 199);
