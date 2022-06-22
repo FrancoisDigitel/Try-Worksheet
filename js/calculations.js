@@ -200,8 +200,8 @@ function calculateMachinePrice(number){
         if((MachineArray[0].value !="/" && quantityArray[0].value != "" && timeTxtArray[0] != "")
             ||( MachineArray[0].value !="/" && quantityArray[0].value != 0  && timeTxtArray[0] != 0)){
                     var time = machineTimeArray[0].value;
-                    var result = time / 60;
-                    var price = machinePerHour * result * quantityArray[0].value;
+                    var percentage = time / 60;
+                    var price = machinePerHour * percentage * quantityArray[0].value;
                     price = Number(price.toFixed(2)) //  EN: limit to 2 digits  behind komma // DE: Limitiert auf 2 Stellen hinter dem Komma
                     if(price < 10 ){
                             priceArray[0].value = "0"+ price + "€"
@@ -218,8 +218,8 @@ function calculateMachinePrice(number){
             if((MachineArray[1].value !="/" && quantityArray[1].value != "" && timeTxtArray[1] != "")
             ||( MachineArray[1].value !="/" && quantityArray[1].value != 0  && timeTxtArray[1] != 0)){
                     var time = machineTimeArray[0].value;
-                    var result = time / 60;
-                    var price = machinePerHour * result * quantityArray[0].value;
+                    var percentage = time / 60;
+                    var price = machinePerHour * percentage * quantityArray[0].value;
                     price = Number(price.toFixed(2))
                     if(price < 10 ){
                         priceArray[1].value = "0"+ price + "€"
@@ -236,8 +236,8 @@ function calculateMachinePrice(number){
             if((MachineArray[2].value !="/" && quantityArray[2].value != "" && timeTxtArray[2] != "")
             ||( MachineArray[2].value !="/" && quantityArray[2].value != 0  && timeTxtArray[2] != 0)){
                     var time = machineTimeArray[0].value;
-                    var result = time / 60;
-                    var price = machinePerHour * result * quantityArray[0].value;
+                    var percentage = time / 60;
+                    var price = machinePerHour * percentage * quantityArray[0].value;
                     price = Number(price.toFixed(2))
                     if(price < 10 ){
                             priceArray[2].value = "0"+ price + "€"
@@ -254,8 +254,8 @@ function calculateMachinePrice(number){
             if((MachineArray[3].value !="/" && quantityArray[3].value != "" && timeTxtArray[3] != "")
             ||( MachineArray[3].value !="/" && quantityArray[3].value != 0  && timeTxtArray[3] != 0)){
                     var time = machineTimeArray[0].value;
-                    var result = time / 60;
-                    var price = machinePerHour * result * quantityArray[0].value;
+                    var percentage = time / 60;
+                    var price = machinePerHour * percentage * quantityArray[0].value;
                     price = Number(price.toFixed(2))
                     if(price < 10 ){
                             priceArray[3].value = "0"+ price + "€"
