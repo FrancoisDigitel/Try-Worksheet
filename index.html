@@ -102,7 +102,7 @@
                             <label id = "lcheckbox1" for = "tondre ">tondre la pelouse</label>
                         </td>
                         <td>
-                            <input type = "text" id="temps.1" name = "temps.1" class = "time" onmouseleave="javascript:calculateTotalTime()">
+                            <input type = "text" id="temps.1" name = "temps.1" class = "time" value = ""onmouseleave="javascript:calculateTotalTime(); javascript:checkCheckbox(1)">
                         </td>
                     </tr>
                     <tr>
@@ -111,7 +111,7 @@
                             <label id = "lcheckbox2" for = "debroussailler ">Débrousailler</label>
                         </td>
                         <td>
-                            <input type = "text" id="temps.2" name = "temps.2" class = "time" onmouseleave="javascript:calculateTotalTime()" >
+                            <input type = "text" id="temps.2" name = "temps.2" class = "time" value="" onmouseleave="javascript:calculateTotalTime(); javascript:checkCheckbox(2)" >
                         </td>
                     </tr>
                     <tr>
@@ -120,7 +120,7 @@
                             <label id = "lcheckbox3" for = "bêcher ">Bêcher le jardin</label>
                         </td>
                         <td>
-                            <input type = "text" id="temps.3" name = "temps.3" class = "time" onmouseleave="javascript:calculateTotalTime()">
+                            <input type = "text" id="temps.3" name = "temps.3" class = "time" onmouseleave="javascript:calculateTotalTime(); javascript:checkCheckbox()">
                         </td>
                     </tr>
                     <tr>
@@ -129,7 +129,7 @@
                             <label id = "lcheckbox4" for = "tailler">Tailler des haies</label>
                         </td>
                         <td>
-                            <input type = "text" id="temps.4" name = "temps.4" class = "time" onmouseleave="javascript:calculateTotalTime()">
+                            <input type = "number" id="temps.4" name = "temps.4" class = "time" onmouseleave="javascript:calculateTotalTime(); javascript:checkCheckbox(3)">
                         </td>
                     </tr>
                     <tr>
@@ -138,7 +138,7 @@
                             <label id = "lcheckbox5" for = "couper ">Couper / Tailler des arbres</label>
                         </td>
                         <td>
-                            <input type = "text" id="temps.5" name = "temps.5" class = "time" onmouseleave="javascript:calculateTotalTime()">
+                            <input type = "number" id="temps.5" name = "temps.5" class = "time" onmouseleave="javascript:calculateTotalTime(); javascript:checkCheckbox(4)">
                         </td>
                     </tr>
                     <tr>
@@ -147,7 +147,7 @@
                             <label id = "lcheckbox6" for = "jardinage ">Jardinage divers</label>
                         </td>
                         <td>
-                            <input type = "text" id="temps.6" name = "temps.6" class = "time" onmouseleave="javascript:calculateTotalTime()">
+                            <input type = "number" id="temps.6" name = "temps.6" class = "time" onmouseleave="javascript:calculateTotalTime(); javascript:checkCheckbox()">
                         </td>
                     </tr>
                     <tr>
@@ -156,7 +156,7 @@
                             <label id = "lcheckbox7" for = "ramassage ">Ramassage feuilles</label>
                         </td>
                         <td>
-                            <input type = "text" id="temps.7" name = "temps.7" class = "time" onmouseleave="javascript:calculateTotalTime()">
+                            <input type = "number" id="temps.7" name = "temps.7" class = "time" onmouseleave="javascript:calculateTotalTime(); javascript:checkCheckbox()">
                         </td>
                     </tr>
                     <tr>
@@ -165,7 +165,7 @@
                             <label id = "lcheckbox8" for = "recyclage ">Recyclage</label>
                         </td>
                         <td>
-                            <input type = "text" id="temps.8" name = "temps.8" class = "time" onmouseleave="javascript:calculateTotalTime()">
+                            <input type = "number" id="temps.8" name = "temps.8" class = "time" onmouseleave="javascript:calculateTotalTime(); javascript:checkCheckbox()">
                         </td>
                     </tr>
             </td>
@@ -182,7 +182,7 @@
                             <label id = "lcheckbox9" for = "nettoyage ">Nettoyage haute pression</label>
                         </td>
                         <td>
-                            <input type = "text" id="temps.9" name = "temps.9" class = "time" onmouseleave="javascript:calculateTotalTime()">
+                            <input type = "number" id="temps.9" name = "temps.9" class = "time" onmouseleave="javascript:calculateTotalTime(); javascript:checkCheckbox(5)">
 
                         </td>
                     </tr>
@@ -192,7 +192,7 @@
                             <label id = "lcheckbox10" for = "nettoyageD ">Nettoyage divers</label>
                         </td>
                         <td>
-                            <input type = "text" id="temps.10" name = "temps.10" class = "time" onmouseleave="javascript:calculateTotalTime()">
+                            <input type = "number" id="temps.10" name = "temps.10" class = "time" onmouseleave="javascript:calculateTotalTime(); javascript:checkCheckbox()">
 
                         </td>
                     </tr>
@@ -202,7 +202,7 @@
                             <label id = "lcheckbox11" for = "nettoyageT ">Nettoyage tombes</label>
                         </td>
                         <td>
-                            <input type = "text" id="temps.11" name = "temps.11" class = "time" onmouseleave="javascript:calculateTotalTime()">
+                            <input type = "number" id="temps.11" name = "temps.11" class = "time" onmouseleave="javascript:calculateTotalTime(); javascript:checkCheckbox()">
 
                         </td>
                     </tr>
@@ -212,17 +212,17 @@
                             <label id = "lcheckbox12" for = "bricolage">Bricolage</label>
                         </td>
                         <td>
-                            <input type = "text" id="temps.12" name = "temps.12" class = "time" onmouseleave="javascript:calculateTotalTime()">
+                            <input type = "number" id="temps.12" name = "temps.12" class = "time" onmouseleave="javascript:calculateTotalTime(); javascript:checkCheckbox()">
 
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <input Type = "checkbox" name="peinture " id = "checkbox13" class = "work" >
+                            <input Type = "checkbox" name="peinture " id = "checkbox13" class = "work"  >
                             <label id = "lcheckbox13" for = "peinture ">Peinture</label>
                         </td>
                         <td>
-                            <input type = "text" id="temps.13" name = "temps.13" class = "time">
+                            <input type = "number" id="temps.13" name = "temps.13" class = "time" onmouseleave="javascript:calculateTotalTime(); javascript:checkCheckbox()">
 
                         </td>
                     </tr>
@@ -232,7 +232,7 @@
                             <label id = "lcheckbox14" for = "déblayage ">Déblayage de neige</label>
                         </td>
                         <td>
-                            <input type = "text" id="temps.14" name = "temps.14" class = "time" onmouseleave="javascript:calculateTotalTime()">
+                            <input type = "number" id="temps.14" name = "temps.14" class = "time" onmouseleave="javascript:calculateTotalTime(); javascript:checkCheckbox()">
 
                         </td>
                     </tr>
@@ -242,7 +242,7 @@
                             <label id = "lcheckbox15" for = "trajet ">Trajet composte</label>
                         </td>
                         <td>
-                            <input type = "text" id="temps.15" name = "temps.15" class = "time" onmouseleave="javascript:calculateTotalTime()">
+                            <input type = "number" id="temps.15" name = "temps.15" class = "time" onmouseleave="javascript:calculateTotalTime(); javascript:checkCheckbox()">
 
                         </td>
                     </tr>
@@ -252,7 +252,7 @@
                             <label id = "lcheckbox16" for = "trajetD ">Trajet divers</label>
                         </td>
                         <td>
-                            <input type = "text" id="temps.16" name = "temps.16" class = "time" onmouseleave="javascript:calculateTotalTime()">
+                            <input type = "number" id="temps.16" name = "temps.16" class = "time" onmouseleave="javascript:calculateTotalTime(); javascript:checkCheckbox()">
 
                         </td>
                     </tr>
@@ -262,7 +262,7 @@
                             <label id = "lcheckbox17" for = "trajetM ">Trajet Minett-Kompost</label>
                         </td>
                         <td>
-                            <input type = "text" id="temps.17" name = "temps.17" class = "time" onmouseleave="javascript:calculateTotalTime()">
+                            <input type = "number" id="temps.17" name = "temps.17" class = "time" onmouseleave="javascript:calculateTotalTime(); javascript:checkCheckbox()">
                         </td>
                     </tr>
                     </td>
@@ -281,27 +281,27 @@
             </tr>
             <tr>
                 <td><input type="text" name = "machine1" id="machine1" class = "Machine" value ="/" onmouseleave="javascript:calculateMachinePrice(1)"></td>
-                <td><input type="number" name = "qMachine1" id="qMachine1" class = "Quantity"></td>
-                <td><input type="number" name = "nMachine1" id="nMachine1"  class = "MachineTime"></td>
-                <td><input type="text" name = "pMachine1" id="pMachine1" class = "Price"></td>
+                <td><input type="number" name = "qMachine1" id="qMachine1" class = "Quantity" onmouseleave="javascript:calculateMachinePrice(1)" ></td>
+                <td><input type="number" name = "nMachine1" id="nMachine1"  class = "MachineTime" onmouseleave="javascript:calculateMachinePrice(1)"></td>
+                <td><input type="text" name = "pMachine1" id="pMachine1" class = "Price" disabled></td>
             </tr>
             <tr>
                 <td><input type="text" name = "machine2" id="machine2"  class = "Machine" value ="/" onmouseleave="javascript:calculateMachinePrice(2)"></td>
-                <td><input type="number" name = "qMachine2" id="qMachine2"  class = "Quantity"></td>
-                <td><input type="number" name = "nMachine2" id="nMachine2"  class = "MachineTime"></td>
-                <td><input type="text" name = "pMachine2" id="pMachine2" class = "Price"></td>
+                <td><input type="number" name = "qMachine2" id="qMachine2"  class = "Quantity" onmouseleave="javascript:calculateMachinePrice(2)"></td>
+                <td><input type="number" name = "nMachine2" id="nMachine2"  class = "MachineTime" onmouseleave="javascript:calculateMachinePrice(2)"></td>
+                <td><input type="text" name = "pMachine2" id="pMachine2" class = "Price" disabled></td>
             </tr>
             <tr>
                 <td><input type="text" name = "machine3" id="machine3"  class = "Machine" value ="/" onmouseleave="javascript:calculateMachinePrice(3)"></td>
-                <td><input type="number" name = "qMachine3" id="qMachine3"  class = "Quantity"></td>
-                <td><input type="number" name = "nMachine3" id="nMachine3"  class = "MachineTime"></td>
-                <td><input type="text" name = "pMachine3" id="pMachine3" class = "Price"></td>
+                <td><input type="number" name = "qMachine3" id="qMachine3"  class = "Quantity" onmouseleave="javascript:calculateMachinePrice(3)"></td>
+                <td><input type="number" name = "nMachine3" id="nMachine3"  class = "MachineTime" onmouseleave="javascript:calculateMachinePrice(3)"></td>
+                <td><input type="text" name = "pMachine3" id="pMachine3" class = "Price" disabled></td>
             </tr>
             <tr>
                 <td><input type="text" name = "machine4" id="machine4"  class = "Machine" value ="/" onmouseleave="javascript:calculateMachinePrice(4)"></td>
-                <td><input type="number" name = "qMachine4" id="qMachine4"  class = "Quantity"></td>
-                <td><input type="number" name = "nMachine4" id="nMachine4"  class = "MachineTime"></td>
-                <td><input type="text" name = "pMachine4" id="pMachine4" class = "Price"></td>
+                <td><input type="number" name = "qMachine4" id="qMachine4"  class = "Quantity" onmouseleave="javascript:calculateMachinePrice(4)"></td>
+                <td><input type="number" name = "nMachine4" id="nMachine4"  class = "MachineTime" onmouseleave="javascript:calculateMachinePrice(4)"></td>
+                <td><input type="text" name = "pMachine4" id="pMachine4" class = "Price" disabled></td>
             </tr>
         </table>
         <table id = "workers">
@@ -314,32 +314,32 @@
             <tr>
                 <td id="THIS"></td>
                 <td><input type="text" name = "worker1" id="worker1" class = "WorkerName" onmouseleave="javascript: calculateWorkerPrice(1)"></td>
-                <td><input type="text" name = "hWorker1" id="hWorker1" class = "WorkerTime"></td>
-                <td><input type="text" name = "pWorker1" id="pWworker1" class = "Price"></td>
+                <td><input type="text" name = "hWorker1" id="hWorker1" class = "WorkerTime" onmouseleave="javascript: calculateWorkerPrice(1)"></td>
+                <td><input type="text" name = "pWorker1" id="pWworker1" class = "Price" disabled></td>
             </tr>
             <tr>
                 <td id="THIS"></td>
                 <td><input type="text" name = "worker2" id="worker2" class = "WorkerName"  onmouseleave="javascript: calculateWorkerPrice(2)"></td>
-                <td><input type="text" name = "hWorker2" id="hWorker2" class = "WorkerTime"></td>
-                <td><input type="text" name = "pWorker2" id="pWworker2" class = "Price"></td>
+                <td><input type="text" name = "hWorker2" id="hWorker2" class = "WorkerTime"  onmouseleave="javascript: calculateWorkerPrice(2)"></td>
+                <td><input type="text" name = "pWorker2" id="pWworker2" class = "Price" disabled></td>
             </tr>
             <tr>
                 <td id="THIS"></td>
                 <td><input type="text" name = "worker3" id="worker3" class = "WorkerName"  onmouseleave="javascript: calculateWorkerPrice(3)"></td>
-                <td><input type="text" name = "hWorker3" id="hWorker3" class = "WorkerTime"></td>
-                <td><input type="text" name = "pWorker3" id="pWworker3" class = "Price"></td>
+                <td><input type="text" name = "hWorker3" id="hWorker3" class = "WorkerTime"  onmouseleave="javascript: calculateWorkerPrice(3)"></td>
+                <td><input type="text" name = "pWorker3" id="pWworker3" class = "Price" disabled></td>
             </tr>
             <tr>
                 <td id="THIS"></td>
                 <td><input type="text" name = "worker4" id="worker4" class = "WorkerName"  onmouseleave="javascript: calculateWorkerPrice(4)"></td>
-                <td><input type="text" name = "hWorker4" id="hWorker4" class = "WorkerTime"></td>
-                <td><input type="text" name = "pWorker4" id="pWworker4" class = "Price"></td>
+                <td><input type="text" name = "hWorker4" id="hWorker4" class = "WorkerTime"  onmouseleave="javascript: calculateWorkerPrice(4)"></td>
+                <td><input type="text" name = "pWorker4" id="pWworker4" class = "Price" disabled></td>
             </tr>
             <tr>
                 <td id="THIS"><input style="border: none;background-color: transparent;resize: none;outline: none;"></td>
                 <td><input type="text" name = "worker5" id="worker5" class = "WorkerName"  onmouseleave="javascript: calculateWorkerPrice(5)"></td>
-                <td><input type="text" name = "hWorker5" id="hWorker5" class = "WorkerTime"></td>
-                <td><input type="text" name = "pWorker5" id="pWworker5" class = "Price"></td>
+                <td><input type="text" name = "hWorker5" id="hWorker5" class = "WorkerTime"  onmouseleave="javascript: calculateWorkerPrice(5)"></td>
+                <td><input type="text" name = "pWorker5" id="pWworker5" class = "Price" disabled></td>
             </tr>
         </table>
         <table id = "produits">
@@ -350,31 +350,38 @@
             </tr>
             <tr>
                 <td>
-                    <input type="checkbox" name = "produit1" id="produi1">
+                    <input type="checkbox" name = "produit1" id="produi1" class = "Product">
                     <label for = "produit1" id = "lProduit1">Produit de nettoyage</label>
                 </td>
-                <td><input type="text" name = "qProduit1" id="qProduit1"></td>
-                <td><input type="text" name = "pProduit1" id="pProduit1"></td>
+                <td><input type="text" name = "qProduit1" id="qProduit1" class = "QuantityProduct" onmouseleave="javascript:calculateProduct(0)"></td>
+                <td><input type="text" name = "pProduit1" id="pProduit1" class = "Price" disabled></td>
             </tr>
             <tr>
                 <td>
-                    <input type="checkbox" name = "produit2" id="produi2">
+                    <input type="checkbox" name = "produit2" id="produi2" class = "Product">
                     <label for = "produit2" id = "lProduit2">Sel (Kg)</label>
                 </td>
-                <td><input type="text" name = "qProduit2" id="qProduit2"></td>
-                <td><input type="text" name = "pProduit2" id="pProduit2"></td>
+                <td><input type="text" name = "qProduit2" id="qProduit2" class = "QuantityProduct" onmouseleave="javascript:calculateProduct(1)"></td>
+                <td><input type="text" name = "pProduit2" id="pProduit2" class = "Price" disabled></td>
             </tr>
             <tr>
                 <td>
-                    <input type="checkbox" name = "produit3" id="produi3">
+                    <input type="checkbox" name = "produit3" id="produi3" class = "Product">
                     <label for = "produit3" id = "lProduit3">Frais RDV. non respecté</label>
                 </td>
-                <td><input type="text" name = "qProduit3" id="qProduit3"></td>
-                <td><input type="text" name = "pProduit3" id="pProduit3"></td>
+                <td><input type="text" name = "qProduit3" id="qProduit3" class = "QuantityProduct" onmouseleave="javascript:calculateProduct(2)"></td>
+                <td><input type="text" name = "pProduit3" id="pProduit3" class = "Price " disabled></td>
+            </tr>
+            <tr>
+                <td><label for ="totalPrice" id="ltotalPrice" >Prix totale</label></td>
+                <td><input type = "button" name = "BtotalPrice" id = "bTotalPrice" value = "calcule prix" onclick="javascript:calculateTotalPrice(); javascript:calculateTotalTime()"></td>
+                <td><input type = "text" name = "totalPrice" id = "totalPrice" disabled></td>
             </tr>
         </table>
     </div>
+        
         <textarea id ="signature" rows = 5 cols = 100 placeholder = "Signature Client"></textarea>
+
     </form>
     <!--<a href="javascript:exportPDF();">Export</a> <br>-->
     <button class="w3-btn w3-block w3-red" type="button" onclick="javascript:exportPDF()">Export as PDF</button> <br>

@@ -1,13 +1,24 @@
 
-// different class elements
+// these belong to the table under the "Travaux Effectues" title
 let checkboxes = document.getElementsByClassName("work");
 let timeTextboxes = document.getElementsByClassName("time");
+
+//prices
+let priceTextboxes = document.getElementsByClassName("Price");
+
+//machine
+let machineTimeTextBoxes = document.getElementsByClassName("MachineTime");
 let MachineTxtBoxes = document.getElementsByClassName("Machine");
 let quantityTextboxes = document.getElementsByClassName("Quantity");
-let priceTextboxes = document.getElementsByClassName("Price");
-let machineTimeTextBoxes = document.getElementsByClassName("MachineTime");
+
+//workers
 let workerNameBoxes = document.getElementsByClassName("WorkerName");
 let workerTimeBoxes = document.getElementsByClassName("WorkerTime");
+
+//product
+let productBoxes = document.getElementsByClassName("Product");
+let productQuantityBoxes = document.getElementsByClassName("QuantityProduct");
+
 
 // Arrays
 var checkBoxarray =[];
@@ -18,6 +29,8 @@ var priceArray = [];
 var machineTimeArray = [];
 var workerNameArray = [];
 var workerTimeArray = [];
+var productArray = [];
+var productQuantityArray = [];
 
 // Time variable
 var totalMins = 0;
@@ -27,7 +40,11 @@ var Mins = 0;
 // Tarif
 var workerPerHour = 16; 
 var machinePerHour = 5;
+
+
 // functions / Funktionen
+
+// this function gets used to initialize all the needed arrays while the page is getting loaded
 function setArrays(){
     
     for(var i = 0; i < checkboxes.length; i++) {
@@ -53,6 +70,12 @@ function setArrays(){
     }
     for(var i = 0; i < workerTimeBoxes.length; i++) {
         workerTimeArray.push(workerTimeBoxes[i])
+    }
+    for(var i = 0; i < productBoxes.length; i++) {
+        productArray.push(productBoxes[i])
+    }
+    for(var i = 0; i < productQuantityBoxes.length; i++) {
+        productQuantityArray.push(productQuantityBoxes[i])
     }
 }
 
@@ -90,16 +113,25 @@ function calculateTotalTime(){
 
 
 function addMachine(number){
-
+var foundEqualMachine = false;
     switch (number) {
         case 1:
-            if(checkBoxarray[0].checked == true)
+            if(checkBoxarray[0].checked == true){
+            for (var i = 0; i < 4; i++) {
+                if(MachineArray[i].value == "Tondeuse"){
+                    foundEqualMachine = true;
+                    break;
+                }
+            }
+            if(!foundEqualMachine){
                 for (var i = 0; i < 4; i++) {
                     if (MachineArray[i].value == "/") {
                         MachineArray[i].value = "Tondeuse";
                         break;
                     }
                 }
+            }
+            }
             else{
                     for (var i = 0; i < 4; i++) {
                         if (MachineArray[i].value == "Tondeuse") {
@@ -114,13 +146,19 @@ function addMachine(number){
             break;
 
         case 2:
-            if(checkBoxarray[1].checked == true)
+            if(checkBoxarray[1].checked == true){
+            for (var i = 0; i < 4; i++) {
+                if(MachineArray[i].value == "Débrouss"){
+                    break;
+                }
+            }
                 for (var i = 0; i < 4; i++) {
                     if (MachineArray[i].value == "/") {
                         MachineArray[i].value = "Débrouss";
                         break;
                     }
                 }
+            }
             else{
                 for (var i = 0; i < 4; i++) {
                     if (MachineArray[i].value == "Débrouss") {
@@ -134,13 +172,19 @@ function addMachine(number){
             }
             break;
         case 3:
-            if(checkBoxarray[3].checked == true)
+            if(checkBoxarray[3].checked == true){
+            for (var i = 0; i < 4; i++) {
+                if(MachineArray[i].value == "Taille-Haie"){
+                    break;
+                }
+            }
                 for (var i = 0; i < 4; i++) {
                     if (MachineArray[i].value == "/") {
                         MachineArray[i].value = "Taille-Haie";
                         break;
                     }
                 }
+            }
             else{
                 for (var i = 0; i < 4; i++) {
                     if (MachineArray[i].value == "Taille-Haie") {
@@ -154,13 +198,19 @@ function addMachine(number){
             }
             break;
         case 4:
-                if(checkBoxarray[4].checked == true)
+                if(checkBoxarray[4].checked == true){
+                for (var i = 0; i < 4; i++) {
+                    if(MachineArray[i].value == "Tronçonneuse"){
+                        break;
+                    }
+                }
                     for (var i = 0; i < 4; i++) {
                         if (MachineArray[i].value == "/") {
                             MachineArray[i].value = "Tronçonneuse";
                             break;
                         }
                     }
+                }
                 else{
                     for (var i = 0; i < 4; i++) {
                         if (MachineArray[i].value == "Tronçonneuse") {
@@ -171,13 +221,19 @@ function addMachine(number){
                 }
                 break;
         case 5:
-                if(checkBoxarray[8].checked == true)
+                if(checkBoxarray[8].checked == true){
+                for (var i = 0; i < 4; i++) {
+                    if(MachineArray[i].value == "Kärcher"){
+                        break;
+                    }
+                }
                     for (var i = 0; i < 4; i++) {
                         if (MachineArray[i].value == "/") {
                             MachineArray[i].value = "Kärcher";
                             break;
                         }
                     }
+                }
                 else{
                     for (var i = 0; i < 4; i++) {
                         if (MachineArray[i].value == "Kärcher") {
@@ -340,3 +396,50 @@ function calculateWorkerPrice(number){
         break;
     }
 }
+
+function calculateProduct(number){
+    if(productArray[number].checked == true){
+        switch (number){
+            case 0:
+                priceArray[9].value = productQuantityArray[number].value * 0.50;
+                break;
+            case 1: 
+                priceArray[10].value = productQuantityArray[number].value * 0.50;
+                break
+            case 2:
+                priceArray[11].value = productQuantityArray[number].value * 0.50;
+                break;
+        }
+    }
+        else{
+            switch (number){
+                case 0:
+                    priceArray[9].value = "";
+                    break;
+                case 1: 
+                    priceArray[10].value = "";
+                    break
+                case 2:
+                    priceArray[11].value = "";
+                    break;
+            }
+        }
+}
+
+function calculateTotalPrice(){
+    var price = 0;
+    for(var i = 0; i < priceTextboxes.length; i++){
+        price += priceArray[i].value;
+    }
+    document.getElementById("totalPrice").value = Number(parseFloat(price.toFixed(2)));
+}
+
+function checkCheckbox(number){
+    alert(timeTxtArray[1].value)
+    for(var i = 0; i < timeTextboxes.length; i++){
+       if(timeTextboxes[i].value != ""){
+            checkBoxarray[i].checked = true;
+            addMachine(number)
+       }
+        }
+    }
