@@ -275,10 +275,10 @@ function calculateMachinePrice(number){
                     var price = machinePerHour * percentage * quantityArray[0].value;
                     price = Number(price.toFixed(2)) //  EN: limit to 2 digits  behind komma // DE: Limitiert auf 2 Stellen hinter dem Komma
                     if(price < 10 ){
-                            priceArray[0].value = "0"+ price + "€"
+                            priceArray[0].value = "0"+ price
                     }
                     else{
-                            priceArray[0].value = price + "€"
+                            priceArray[0].value = price
                     }
             }
             else{
@@ -288,15 +288,15 @@ function calculateMachinePrice(number){
         case 2:
             if((MachineArray[1].value !="/" && quantityArray[1].value != "" && timeTxtArray[1] != "")
             ||( MachineArray[1].value !="/" && quantityArray[1].value != 0  && timeTxtArray[1] != 0)){
-                    var time = machineTimeArray[0].value;
+                    var time = machineTimeArray[1].value;
                     var percentage = time / 60;
-                    var price = machinePerHour * percentage * quantityArray[0].value;
+                    var price = machinePerHour * percentage * quantityArray[1].value;
                     price = Number(price.toFixed(2))
                     if(price < 10 ){
-                        priceArray[1].value = "0"+ price + "€"
+                        priceArray[1].value = "0"+ price
                     }
                     else{
-                        priceArray[1].value = price + "€"
+                        priceArray[1].value = price
                     }
                 }
             else{
@@ -306,15 +306,15 @@ function calculateMachinePrice(number){
         case 3: 
             if((MachineArray[2].value !="/" && quantityArray[2].value != "" && timeTxtArray[2] != "")
             ||( MachineArray[2].value !="/" && quantityArray[2].value != 0  && timeTxtArray[2] != 0)){
-                    var time = machineTimeArray[0].value;
+                    var time = machineTimeArray[2].value;
                     var percentage = time / 60;
-                    var price = machinePerHour * percentage * quantityArray[0].value;
+                    var price = machinePerHour * percentage * quantityArray[2].value;
                     price = Number(price.toFixed(2))
                     if(price < 10 ){
-                            priceArray[2].value = "0"+ price + "€"
+                            priceArray[2].value = "0"+ price 
                     }
                     else{
-                            priceArray[2].value = price + "€"
+                            priceArray[2].value = price
                     }
             }
             else{
@@ -324,15 +324,15 @@ function calculateMachinePrice(number){
         case 4:
             if((MachineArray[3].value !="/" && quantityArray[3].value != "" && timeTxtArray[3] != "")
             ||( MachineArray[3].value !="/" && quantityArray[3].value != 0  && timeTxtArray[3] != 0)){
-                    var time = machineTimeArray[0].value;
+                    var time = machineTimeArray[3].value;
                     var percentage = time / 60;
-                    var price = machinePerHour * percentage * quantityArray[0].value;
+                    var price = machinePerHour * percentage * quantityArray[3].value;
                     price = Number(price.toFixed(2))
                     if(price < 10 ){
-                            priceArray[3].value = "0"+ price + "€"
+                            priceArray[3].value = "0"+ price 
                     }
                     else{
-                            priceArray[3].value = price + "€"
+                            priceArray[3].value = price 
                     }
             }
             else{
@@ -444,9 +444,11 @@ function calculateProduct(number){
 function calculateTotalPrice(){
     var price = 0;
     for(var i = 0; i < priceTextboxes.length; i++){
-        price += priceArray[i].value;
+        if(priceArray[i].value != "")
+        price += parseFloat(priceArray[i].value);
     }
-    document.getElementById("totalPrice").value = Number(parseFloat(price.toFixed(2)));
+    alert(price);
+    document.getElementById("totalPrice").value = Number(parseFloat(price.toFixed((2))));
 }
 
 function checkCheckbox(number){
