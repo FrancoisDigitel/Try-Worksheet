@@ -1,5 +1,5 @@
 
-// these belong to the table under the "Travaux Effectues" title
+// Initialisation der Variablen
 let checkboxes = document.getElementsByClassName("work");
 let timeTextboxes = document.getElementsByClassName("time");
 
@@ -46,6 +46,8 @@ var machinePerHour = 5;
 
 // this function gets used to initialize all the needed arrays while the page is getting loaded
 function setArrays(){
+    // DE: hier werden die verschiedene Elemente in einem Array gespeichert.
+    // EN: Here we save the different elements selcted from the website and save them into arrays accordingly
     
     for(var i = 0; i < checkboxes.length; i++) {
         checkBoxarray.push(checkboxes[i])
@@ -79,7 +81,8 @@ function setArrays(){
     }
 }
 
-
+// DE: Hier wird die Berechnung der Arbeitstunden ausgeführt. 
+// EN: this function is used to calculate the totalTime.
 function calculateTotalTime(){
 
     for (var i = 0; i < timeTextboxes.length; i++) {
@@ -139,9 +142,7 @@ var foundEqualMachine = false;
                         break; 
                         }
                     }
-                    if(timeTxtArray[0].value != "") {
-                        timeTxtArray[0].value = "";
-                    }
+                    calculateTotalTime();
                 }
             break;
 
@@ -149,9 +150,11 @@ var foundEqualMachine = false;
             if(checkBoxarray[1].checked == true){
             for (var i = 0; i < 4; i++) {
                 if(MachineArray[i].value == "Débrouss"){
+                    foundEqualMachine = true;
                     break;
                 }
             }
+            if(!foundEqualMachine){
                 for (var i = 0; i < 4; i++) {
                     if (MachineArray[i].value == "/") {
                         MachineArray[i].value = "Débrouss";
@@ -159,6 +162,7 @@ var foundEqualMachine = false;
                     }
                 }
             }
+        }
             else{
                 for (var i = 0; i < 4; i++) {
                     if (MachineArray[i].value == "Débrouss") {
@@ -166,18 +170,18 @@ var foundEqualMachine = false;
                         break;
                     }
                 }
-                if(timeTxtArray[1].value != "") {
-                    timeTxtArray[1].value = "";
-                }
+                calculateTotalTime()
             }
             break;
         case 3:
             if(checkBoxarray[3].checked == true){
             for (var i = 0; i < 4; i++) {
                 if(MachineArray[i].value == "Taille-Haie"){
+                    foundEqualMachine = true;
                     break;
                 }
             }
+            if(!foundEqualMachine){
                 for (var i = 0; i < 4; i++) {
                     if (MachineArray[i].value == "/") {
                         MachineArray[i].value = "Taille-Haie";
@@ -185,6 +189,8 @@ var foundEqualMachine = false;
                     }
                 }
             }
+            calculateTotalTime
+        }
             else{
                 for (var i = 0; i < 4; i++) {
                     if (MachineArray[i].value == "Taille-Haie") {
@@ -192,18 +198,18 @@ var foundEqualMachine = false;
                         break;
                     }
                 }
-                if(timeTxtArray[3].value != "") {
-                    timeTxtArray[3].value = "";
-                }
+                calculateTotalTime()
             }
             break;
         case 4:
                 if(checkBoxarray[4].checked == true){
                 for (var i = 0; i < 4; i++) {
                     if(MachineArray[i].value == "Tronçonneuse"){
+                        foundEqualMachine = true;
                         break;
                     }
                 }
+                if(!foundEqualMachine){
                     for (var i = 0; i < 4; i++) {
                         if (MachineArray[i].value == "/") {
                             MachineArray[i].value = "Tronçonneuse";
@@ -211,6 +217,8 @@ var foundEqualMachine = false;
                         }
                     }
                 }
+                calculateTotalTime()
+            }
                 else{
                     for (var i = 0; i < 4; i++) {
                         if (MachineArray[i].value == "Tronçonneuse") {
@@ -221,12 +229,16 @@ var foundEqualMachine = false;
                 }
                 break;
         case 5:
+                ("hallo")
                 if(checkBoxarray[8].checked == true){
                 for (var i = 0; i < 4; i++) {
+                
                     if(MachineArray[i].value == "Kärcher"){
+                        foundEqualMachine = true;
                         break;
                     }
                 }
+                if(!foundEqualMachine){
                     for (var i = 0; i < 4; i++) {
                         if (MachineArray[i].value == "/") {
                             MachineArray[i].value = "Kärcher";
@@ -234,6 +246,7 @@ var foundEqualMachine = false;
                         }
                     }
                 }
+            }
                 else{
                     for (var i = 0; i < 4; i++) {
                         if (MachineArray[i].value == "Kärcher") {
@@ -241,9 +254,7 @@ var foundEqualMachine = false;
                             break;
                         }
                     }
-                    if(timeTxtArray[8].value != "") {
-                        timeTxtArray[8].value = "";
-                    }
+                    calculateTotalTime();
                 }
                 break;
     }
@@ -435,11 +446,11 @@ function calculateTotalPrice(){
 }
 
 function checkCheckbox(number){
-    alert(timeTxtArray[1].value)
-    for(var i = 0; i < timeTextboxes.length; i++){
+    for(var i = 0; i < timeTxtArray.length; i++){
        if(timeTextboxes[i].value != ""){
             checkBoxarray[i].checked = true;
+            if (number == 1 || number == 2 || number == 3 || number == 4 || number == 5)
             addMachine(number)
-       }
         }
     }
+}
