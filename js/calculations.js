@@ -142,8 +142,9 @@ var foundEqualMachine = false;
                         break; 
                         }
                     }
-                    calculateTotalTime();
+                    timeTxtArray[0].value = "";
                 }
+                calculateTotalTime();
             break;
 
         case 2:
@@ -170,7 +171,8 @@ var foundEqualMachine = false;
                         break;
                     }
                 }
-                calculateTotalTime()
+                timeTxtArray[1].value = "";
+              
             }
             break;
         case 3:
@@ -189,7 +191,6 @@ var foundEqualMachine = false;
                     }
                 }
             }
-            calculateTotalTime
         }
             else{
                 for (var i = 0; i < 4; i++) {
@@ -198,8 +199,9 @@ var foundEqualMachine = false;
                         break;
                     }
                 }
-                calculateTotalTime()
+                timeTxtArray[3].value = "";
             }
+            calculateTotalTime();
             break;
         case 4:
                 if(checkBoxarray[4].checked == true){
@@ -217,7 +219,7 @@ var foundEqualMachine = false;
                         }
                     }
                 }
-                calculateTotalTime()
+               
             }
                 else{
                     for (var i = 0; i < 4; i++) {
@@ -226,10 +228,11 @@ var foundEqualMachine = false;
                             break;
                         }
                     }
+                    timeTxtArray[4].value = "";
                 }
+                calculateTotalTime();
                 break;
         case 5:
-                ("hallo")
                 if(checkBoxarray[8].checked == true){
                 for (var i = 0; i < 4; i++) {
                 
@@ -247,16 +250,17 @@ var foundEqualMachine = false;
                     }
                 }
             }
-                else{
+            else{
                     for (var i = 0; i < 4; i++) {
                         if (MachineArray[i].value == "Kärcher") {
-                            MachineArray[i].value = "/";
-                            break;
+                            MachineArray[i].value = "/";       
+                        break; 
                         }
                     }
-                    calculateTotalTime();
+                    timeTxtArray[8].value = "";  
                 }
-                break;
+                calculateTotalTime();
+            break;
     }
 }
 
@@ -449,8 +453,9 @@ function checkCheckbox(number){
     for(var i = 0; i < timeTxtArray.length; i++){
        if(timeTextboxes[i].value != ""){
             checkBoxarray[i].checked = true;
-            if (number == 1 || number == 2 || number == 3 || number == 4 || number == 5)
-            addMachine(number)
-        }
+            
     }
+}
+    if (number == 1 || number == 2 || number == 3 || number == 4 || number == 5)
+    addMachine(number);
 }
