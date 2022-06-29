@@ -1,15 +1,5 @@
 # CIGL-Worksheet
 
-# MYSQL Login details
-
-Current login inforamtion for DataBase
-    > change befor production
-- username=CIGL-USER
-- password=0f$374lXq
-- host=form.lpif.lu
-- port=:3306
-- database=CIGL-DB
-
 # Security for webserver
 
 Stuff to consoder when building the production server.
@@ -23,3 +13,5 @@ Stuff to consoder when building the production server.
 
    - [ ] Add images and make then render with the JS code
    - [ ] Make everything fit into one A4 page
+   - [ ] finish css
+   - [ ] test live version with actual people
