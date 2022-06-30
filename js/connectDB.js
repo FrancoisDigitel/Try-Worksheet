@@ -12,7 +12,7 @@ var con = mysql.createConnection({
 con.connect(function(err) {
     if (err) throw err;
 });
-getSerialNumber()
+getSerialNumber();
 
 // EN: 
 // the UpdateDB() function is used to first get the Date written in the database. 
@@ -35,7 +35,6 @@ getSerialNumber()
         tempYear.forEach(function(index,value){
             if(!isNaN(parseInt(index))){
                 DBYear = parseInt(index);
-                console.log(DBYear);
                 UpdateSerialNumber();
             }
         });
@@ -67,7 +66,7 @@ function UpdateSerialNumber(){
                     con.query(sql, function (err, result) {
                     if (err) throw err;
                         console.log(result.affectedRows + " record(s) updated");
-                        console.log("true");
+                       
                     });
                 }
 
@@ -87,7 +86,7 @@ function UpdateSerialNumber(){
         con.query(sql, function (err, result) {
             if (err) throw err;
                 console.log(result.affectedRows + " record(s) updated");
-                console.log("false");
+                
             });
 
     }
@@ -96,7 +95,6 @@ function UpdateSerialNumber(){
 
  function getSerialNumber(){
    getSerialNumberFromDB()
-   console.log("nada");
    return number;
 }
 
