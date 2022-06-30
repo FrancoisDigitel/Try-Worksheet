@@ -36,7 +36,7 @@
             <td>
                 <table id = "clientInfo">
                     <tr>
-                        <td ><label for="fName" id = "lFName">first Name:</label></td>
+                        <td ><label for="fName" id = "lFName" >first Name:</label></td>
                         <td><input type="text" name="fName" id= "fName" placeholder="John"  required  value=""></td>
                     </tr>
 
@@ -60,26 +60,26 @@
                 <table id = "generalInformation">
                     <tr>
                         <td><label for = "CDate">Date</label></td>
-                        <td><input type=" date" id= "CDate" name = "CDate" placeholder="01/01/2022" required></td>
+                        <td><input type=" date" id= "CDate" name = "CDate" placeholder="01/01/2022" min="01/01/2022" required></td>
                 </tr> 
                 <tr>
                         <td><label for = "NDate" >prochain rdv</label></td>
-                        <td><input type=" date" id= "NDate" name = "NDate" placeholder="01/01/2022" required></td>
+                        <td><input type=" date" id= "NDate" name = "NDate" placeholder="01/01/2022" min="01/01/2022" required></td>
                     </tr> 
                     <tr>
                         
                         <td><label for = "startTime">Heure début</label></td>
-                        <td><input type=" date" id= "STime" name = "startTime" placeholder="08:00" required></td>
+                        <td><input type=" time" id= "STime" name = "startTime" placeholder="08:00" required></td>
                 </tr> 
                 <tr> 
                     <td><label for = "endTime">Heure fin</label></td>
-                    <td><input type=" date" id= "EndTime" name = "endTime" placeholder="08:00" required></td>
+                    <td><input type=" time" id= "EndTime" name = "endTime" placeholder="08:00" required></td>
                         
                 </tr> 
                 <tr>
                         
                     <td><label for = "totalHours">Heure totale</label></td>
-                    <td><input type=" date" id= "TTime" name = "totalHours"></td>
+                    <td><input type=" time" id= "TTime" name = "totalHours" disabled></td>
                         
                 </tr> 
                 </table>
@@ -102,7 +102,7 @@
                             <label id = "lcheckbox1" for = "tondre ">tondre la pelouse</label>
                         </td>
                         <td>
-                            <input type = "text" id="temps.1" name = "temps.1" class = "time" value = ""onmouseleave="javascript:calculateTotalTime(); javascript:checkCheckbox(1)">
+                            <input type = "number"  id="temps.1" name = "temps.1" class = "time" value = ""  onmouseleave="javascript:calculateTotalTime(); javascript:checkCheckbox(1)">
                         </td>
                     </tr>
                     <tr>
@@ -111,7 +111,7 @@
                             <label id = "lcheckbox2" for = "debroussailler ">Débrousailler</label>
                         </td>
                         <td>
-                            <input type = "text" id="temps.2" name = "temps.2" class = "time" value="" onmouseleave="javascript:calculateTotalTime(); javascript:checkCheckbox(2)" >
+                            <input type = "number" max ="480" id="temps.2" name = "temps.2" class = "time" value="" onmouseleave="javascript:calculateTotalTime(); javascript:checkCheckbox(2)" >
                         </td>
                     </tr>
                     <tr>
@@ -120,7 +120,7 @@
                             <label id = "lcheckbox3" for = "bêcher ">Bêcher le jardin</label>
                         </td>
                         <td>
-                            <input type = "text" id="temps.3" name = "temps.3" class = "time" onmouseleave="javascript:calculateTotalTime(); javascript:checkCheckbox()">
+                            <input type = "number" max ="480" id="temps.3" name = "temps.3" class = "time" onmouseleave="javascript:calculateTotalTime(); javascript:checkCheckbox()">
                         </td>
                     </tr>
                     <tr>
@@ -129,7 +129,7 @@
                             <label id = "lcheckbox4" for = "tailler">Tailler des haies</label>
                         </td>
                         <td>
-                            <input type = "text" id="temps.4" name = "temps.4" class = "time" onmouseleave="javascript:calculateTotalTime(); javascript:checkCheckbox(3)">
+                            <input type = "number" max ="480" id="temps.4" name = "temps.4" class = "time" onmouseleave="javascript:calculateTotalTime(); javascript:checkCheckbox(3)">
                         </td>
                     </tr>
                     <tr>
@@ -138,7 +138,7 @@
                             <label id = "lcheckbox5" for = "couper ">Couper / Tailler des arbres</label>
                         </td>
                         <td>
-                            <input type = "text" id="temps.5" name = "temps.5" class = "time" onmouseleave="javascript:calculateTotalTime(); javascript:checkCheckbox(4)">
+                            <input type = "number"  max ="480" id="temps.5" name = "temps.5" class = "time" onmouseleave="javascript:calculateTotalTime(); javascript:checkCheckbox(4)">
                         </td>
                     </tr>
                     <tr>
@@ -147,7 +147,7 @@
                             <label id = "lcheckbox6" for = "jardinage ">Jardinage divers</label>
                         </td>
                         <td>
-                            <input type = "text" id="temps.6" name = "temps.6" class = "time" onmouseleave="javascript:calculateTotalTime(); javascript:checkCheckbox()">
+                            <input type = "number" max ="480" id="temps.6" name = "temps.6" class = "time" onmouseleave="javascript:calculateTotalTime(); javascript:checkCheckbox()">
                         </td>
                     </tr>
                     <tr>
@@ -156,7 +156,7 @@
                             <label id = "lcheckbox7" for = "ramassage ">Ramassage feuilles</label>
                         </td>
                         <td>
-                            <input type = "text" id="temps.7" name = "temps.7" class = "time" onmouseleave="javascript:calculateTotalTime(); javascript:checkCheckbox()">
+                            <input type = "number" max ="480" id="temps.7" name = "temps.7" class = "time" onmouseleave="javascript:calculateTotalTime(); javascript:checkCheckbox()">
                         </td>
                     </tr>
                     <tr>
@@ -165,7 +165,7 @@
                             <label id = "lcheckbox8" for = "recyclage ">Recyclage</label>
                         </td>
                         <td>
-                            <input type = "text" id="temps.8" name = "temps.8" class = "time" onmouseleave="javascript:calculateTotalTime(); javascript:checkCheckbox()">
+                            <input type = "number" max ="480" id="temps.8" name = "temps.8" class = "time" onmouseleave="javascript:calculateTotalTime(); javascript:checkCheckbox()">
                         </td>
                     </tr>
             </td>
@@ -182,7 +182,7 @@
                             <label id = "lcheckbox9" for = "nettoyage ">Nettoyage haute pression</label>
                         </td>
                         <td>
-                            <input type = "text" id="temps.9" name = "temps.9" class = "time" onmouseleave="javascript:calculateTotalTime(); javascript:checkCheckbox(5)">
+                            <input type = "number" max ="480" id="temps.9" name = "temps.9" class = "time" onmouseleave="javascript:calculateTotalTime(); javascript:checkCheckbox(5)">
 
                         </td>
                     </tr>
@@ -192,7 +192,7 @@
                             <label id = "lcheckbox10" for = "nettoyageD ">Nettoyage divers</label>
                         </td>
                         <td>
-                            <input type = "text" id="temps.10" name = "temps.10" class = "time" onmouseleave="javascript:calculateTotalTime(); javascript:checkCheckbox()">
+                            <input type = "number" max ="480" id="temps.10" name = "temps.10" class = "time" onmouseleave="javascript:calculateTotalTime(); javascript:checkCheckbox()">
 
                         </td>
                     </tr>
@@ -202,7 +202,7 @@
                             <label id = "lcheckbox11" for = "nettoyageT ">Nettoyage tombes</label>
                         </td>
                         <td>
-                            <input type = "text" id="temps.11" name = "temps.11" class = "time" onmouseleave="javascript:calculateTotalTime(); javascript:checkCheckbox()">
+                            <input type = "number" max ="480"  id="temps.11" name = "temps.11" class = "time" onmouseleave="javascript:calculateTotalTime(); javascript:checkCheckbox()">
 
                         </td>
                     </tr>
@@ -212,7 +212,7 @@
                             <label id = "lcheckbox12" for = "bricolage">Bricolage</label>
                         </td>
                         <td>
-                            <input type = "text" id="temps.12" name = "temps.12" class = "time" onmouseleave="javascript:calculateTotalTime(); javascript:checkCheckbox()">
+                            <input type = "number" max ="480" id="temps.12" name = "temps.12" class = "time" onmouseleave="javascript:calculateTotalTime(); javascript:checkCheckbox()">
 
                         </td>
                     </tr>
@@ -222,7 +222,7 @@
                             <label id = "lcheckbox13" for = "peinture ">Peinture</label>
                         </td>
                         <td>
-                            <input type = "text" id="temps.13" name = "temps.13" class = "time" onmouseleave="javascript:calculateTotalTime(); javascript:checkCheckbox()">
+                            <input type = "number" max ="480" id="temps.13" name = "temps.13" class = "time" onmouseleave="javascript:calculateTotalTime(); javascript:checkCheckbox()">
 
                         </td>
                     </tr>
@@ -232,7 +232,7 @@
                             <label id = "lcheckbox14" for = "déblayage ">Déblayage de neige</label>
                         </td>
                         <td>
-                            <input type = "text" id="temps.14" name = "temps.14" class = "time" onmouseleave="javascript:calculateTotalTime(); javascript:checkCheckbox()">
+                            <input type = "number" max ="480" id="temps.14" name = "temps.14" class = "time" onmouseleave="javascript:calculateTotalTime(); javascript:checkCheckbox()">
 
                         </td>
                     </tr>
@@ -242,7 +242,7 @@
                             <label id = "lcheckbox15" for = "trajet ">Trajet composte</label>
                         </td>
                         <td>
-                            <input type = "text" id="temps.15" name = "temps.15" class = "time" onmouseleave="javascript:calculateTotalTime(); javascript:checkCheckbox()">
+                            <input type = "number"max ="480" id="temps.15" name = "temps.15" class = "time" onmouseleave="javascript:calculateTotalTime(); javascript:checkCheckbox()">
 
                         </td>
                     </tr>
@@ -252,7 +252,7 @@
                             <label id = "lcheckbox16" for = "trajetD ">Trajet divers</label>
                         </td>
                         <td>
-                            <input type = "text" id="temps.16" name = "temps.16" class = "time" onmouseleave="javascript:calculateTotalTime(); javascript:checkCheckbox()">
+                            <input type = "number" max ="480" id="temps.16" name = "temps.16" class = "time" onmouseleave="javascript:calculateTotalTime(); javascript:checkCheckbox()">
 
                         </td>
                     </tr>
@@ -262,7 +262,7 @@
                             <label id = "lcheckbox17" for = "trajetM ">Trajet Minett-Kompost</label>
                         </td>
                         <td>
-                            <input type = "text" id="temps.17" name = "temps.17" class = "time" onmouseleave="javascript:calculateTotalTime(); javascript:checkCheckbox()">
+                            <input type = "number" max ="480" id="temps.17" name = "temps.17" class = "time" onmouseleave="javascript:calculateTotalTime(); javascript:checkCheckbox()">
                         </td>
                     </tr>
                     </td>
@@ -314,31 +314,31 @@
             <tr>
                 <td id="THIS"></td>
                 <td><input type="text" name = "worker1" id="worker1" class = "WorkerName" onmouseleave="javascript: calculateWorkerPrice(1)"></td>
-                <td><input type="text" name = "hWorker1" id="hWorker1" class = "WorkerTime" onmouseleave="javascript: calculateWorkerPrice(1)"></td>
+                <td><input type="text" name = "hWorker1" id="hWorker1" class = "WorkerTime" onmouseleave="javascript: calculateWorkerPrice(1)"disabled></td>
                 <td><input type="text" name = "pWorker1" id="pWworker1" class = "Price" disabled></td>
             </tr>
             <tr>
                 <td id="THIS"></td>
                 <td><input type="text" name = "worker2" id="worker2" class = "WorkerName"  onmouseleave="javascript: calculateWorkerPrice(2)"></td>
-                <td><input type="text" name = "hWorker2" id="hWorker2" class = "WorkerTime"  onmouseleave="javascript: calculateWorkerPrice(2)"></td>
+                <td><input type="text" name = "hWorker2" id="hWorker2" class = "WorkerTime"  onmouseleave="javascript: calculateWorkerPrice(2)" disabled></td>
                 <td><input type="text" name = "pWorker2" id="pWworker2" class = "Price" disabled></td>
             </tr>
             <tr>
                 <td id="THIS"></td>
                 <td><input type="text" name = "worker3" id="worker3" class = "WorkerName"  onmouseleave="javascript: calculateWorkerPrice(3)"></td>
-                <td><input type="text" name = "hWorker3" id="hWorker3" class = "WorkerTime"  onmouseleave="javascript: calculateWorkerPrice(3)"></td>
+                <td><input type="text" name = "hWorker3" id="hWorker3" class = "WorkerTime"  onmouseleave="javascript: calculateWorkerPrice(3)"disabled></td>
                 <td><input type="text" name = "pWorker3" id="pWworker3" class = "Price" disabled></td>
             </tr>
             <tr>
                 <td id="THIS"></td>
                 <td><input type="text" name = "worker4" id="worker4" class = "WorkerName"  onmouseleave="javascript: calculateWorkerPrice(4)"></td>
-                <td><input type="text" name = "hWorker4" id="hWorker4" class = "WorkerTime"  onmouseleave="javascript: calculateWorkerPrice(4)"></td>
+                <td><input type="text" name = "hWorker4" id="hWorker4" class = "WorkerTime"  onmouseleave="javascript: calculateWorkerPrice(4)" disabled></td>
                 <td><input type="text" name = "pWorker4" id="pWworker4" class = "Price" disabled></td>
             </tr>
             <tr>
                 <td id="THIS"><input style="border: none;background-color: transparent;resize: none;outline: none;"></td>
                 <td><input type="text" name = "worker5" id="worker5" class = "WorkerName"  onmouseleave="javascript: calculateWorkerPrice(5)"></td>
-                <td><input type="text" name = "hWorker5" id="hWorker5" class = "WorkerTime"  onmouseleave="javascript: calculateWorkerPrice(5)"></td>
+                <td><input type="text" name = "hWorker5" id="hWorker5" class = "WorkerTime"  onmouseleave="javascript: calculateWorkerPrice(5)" disabled></td>
                 <td><input type="text" name = "pWorker5" id="pWworker5" class = "Price" disabled></td>
             </tr>
         </table>
