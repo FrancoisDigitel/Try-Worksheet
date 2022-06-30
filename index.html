@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type = "text/javascript" src="./js/pdfExport.js"></script>
     <script type = "text/javascript" src="./js/connectDB.js"></script>
-    <script type = "text/javascript" src="./js/calculations.js"></script>
+    <script type = "text/javascript" src="./js/automatisation.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.8.1/html2pdf.bundle.min.js" integrity="sha512-vDKWohFHe2vkVWXHp3tKvIxxXg0pJxeid5eo+UjdjME3DBFBn2F8yWOE0XmiFcFbXxrEOR1JriWEno5Ckpn15A=="  crossorigin="anonymous"></script>
     <script data-main src="https://requirejs.org/docs/release/2.3.5/minified/require.js"></script>
@@ -36,8 +36,8 @@
             <td>
                 <table id = "clientInfo">
                     <tr>
-                        <td ><label for="fName" id = "lFName" >Prénom:</label></td>
-                        <td><input type="text" name="fName" id= "fName" placeholder="John"  required  value=""></td>
+                        <td ><label for="fName" id = "lFName"  >Prénom:</label></td>
+                        <td><input type="text" name="fName" id= "fName" placeholder="John"  required  value="" onmousedown="javascript:setDate();"></td>
                     </tr>
 
                     <tr>
@@ -63,8 +63,8 @@
             <td>
                 <table id = "generalInformation">
                     <tr>
-                        <td><label for = "CDate">Date</label></td>
-                        <td><input type=" date" id= "CDate" name = "CDate" placeholder="01/01/2022" min="01/01/2022" required></td>
+                        <td><label for = "CDate" >Date</label></td>
+                        <td><input type=" date" id= "CDate" name = "CDate" placeholder="01/01/2022" min="01/01/2022" required disabled></td>
                 </tr> 
                 <tr>
                         <td><label for = "NDate" >prochain rdv</label></td>

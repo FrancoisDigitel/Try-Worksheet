@@ -461,3 +461,11 @@ function checkCheckbox(number){
     if (number == 1 || number == 2 || number == 3 || number == 4 || number == 5)
     addMachine(number);
 }
+
+function setDate(){
+    var date = document.getElementById("CDate").value;
+    date = new Date();
+     date = date.getDate()+'/'+(date.getMonth()+1)+'/'+date.getFullYear(); 
+    console.log(date);
+    document.getElementById("CDate").value = date;
+}
