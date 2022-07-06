@@ -3,10 +3,10 @@ var mysql= require('mysql');
 var number = 0;
 var DBYear = 0;
 var con = mysql.createConnection({
-    host: "form.lpif.lu",
-    user: "CIGL-USER",
-    password: "0f$374lXq",
-    database: "CIGL-DB",
+    host: "host",
+    user: "user",
+    password: "password",
+    database: "db",
     multipleStatements: true
 });
 con.connect(function(err) {
